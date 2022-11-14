@@ -297,6 +297,12 @@ flex-grow: 0;
   height: 72px !important;
 }
 
+.nav-ozura-img-d
+{
+    width: 50px !important;
+  height: 50px !important;
+}
+
 .on-box-bot
 {
     box-sizing: border-box;
@@ -426,6 +432,7 @@ flex-grow: 0;
 .forging-jacket 
 {
     position:absolute;
+    bottom: 100px;
     left: 900px;
 }
 
@@ -482,6 +489,12 @@ flex-grow: 0;
         display:flex !important;
     }
 
+    .upper-nav
+    {
+        margin-right: 24px !important;
+        margin-left: 24px !important;
+    }
+
     .topnav-item
     {
         font-weight:500;
@@ -498,6 +511,7 @@ flex-grow: 0;
     .box-left
     {
         padding-left:24px !important;
+        width: 100% !important
     }
     
 }
@@ -516,4 +530,114 @@ flex-grow: 0;
     {
         display:none;
     }
+}
+
+@media only screen and (max-width: 660px)
+{
+    .text-h1, .text-h2
+    {
+        font-size: 52px !important;
+    }
+
+    .text-h3
+    {
+        font-size: 14px !important;
+    }
+
+    .box-left
+    {
+        width: 100% !important;
+    }
+
+    .text-h2-c 
+    {
+        margin-top: -2rem !important;
+    }
+    
+    .cb-text 
+    {
+        margin-top:8px;
+        width: 120% !important
+    }
+
+    .cb-space-text 
+    {
+        width: 100% !important
+    }
+
+}
+
+@media only screen and (max-width: 420px)
+{
+    .text-h1, .text-h2
+    {
+        font-size: 46px !important;
+    }
+
+    .text-h3
+    {
+        font-size: 12px !important;
+    }
+
+    .box-left
+    {
+        width: 100% !important;
+    }
+
+    .text-h2-c 
+    {
+        margin-top: -2rem !important;
+    }
+    
+    .cb-text 
+    {
+        margin-top:8px;
+        width: 110% !important
+    }
+
+    .ozura-button-nav {
+        padding: 10px 20px 10px 20px !important;
+    }
+
+    .nav-ozura-img
+    {
+        width:30px !important;
+        height: 30px !important;
+    }
+    .ozura-text-nav {
+        font-size: 16px !important;
+    
+    }
+    
+
+}
+
+@media only screen and (max-width: 390px)
+{
+    .text-h1, .text-h2
+    {
+        font-size: 36px !important;
+    }
+
+    .text-h3
+    {
+        font-size: 12px !important;
+    }
+
+    .box-left
+    {
+        width: 100% !important;
+    }
+
+    .text-h2-c 
+    {
+        margin-top: -1.5rem !important;
+    }
+    
+    .cb-text 
+    {
+        margin-top:8px;
+        width: 110% !important
+    }
+
 }

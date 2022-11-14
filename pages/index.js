@@ -102,17 +102,17 @@ export default function Home() {
                             </div>
                             <div className="grow">
                                 <div className="justify-center text-center text-white">
-                                <FontAwesomeIcon icon={faInstagram} className="fa-ozura"/>
+                                <FontAwesomeIcon icon={faLinkedin} className="fa-ozura"/>
                                 </div>
                             </div>
                             <div className="grow">
                                 <div className="justify-center text-center text-white">
-                                <FontAwesomeIcon icon={faInstagram} className="fa-ozura"/>
+                                <FontAwesomeIcon icon={faDiscord} className="fa-ozura"/>
                                 </div>
                             </div>
                             <div className="grow">
                                 <div className="justify-center text-center text-white">
-                                <FontAwesomeIcon icon={faInstagram} className="fa-ozura"/>
+                                <FontAwesomeIcon icon={faTwitter} className="fa-ozura"/>
                                 </div>
                             </div>
                         </div>
@@ -125,12 +125,12 @@ export default function Home() {
           <div className="container-bg h-full w-full m-0 p-0">
               <div className={`container-row h-full mx-0 p-0 ${getBackgroundClass()}`}>
                   
-                  <div className="mx-16 pt-12"> 
+                  <div className="mx-16 pt-12 upper-nav"> 
                       <div className="float-left logo cursor-pointer">
                           <Image src="/images/44-logo.svg" className="" width={200} height={200}/>
                       </div>
                       <div className="float-right top-nav" onClick={() => {setMobileNavShown(!mobileNavShown)}}>
-                          <Image src="/images/nav-button-black.png" className="topnav-button" width={40} height={40}/>
+                          <Image src="/images/nav-button-black.png" className="topnav-button h-12 w-12 nav-ozura-img-d" width={100} height={100}/>
                       </div>
                       
                       
@@ -139,11 +139,11 @@ export default function Home() {
                   
                   { displayedContentIndex === 0 &&
                     <div className="container-fluid container-body w-full flex items-end  body-avatar px-0 mx-0 pr-0 flex-end absolute bottom-36">
-                        <div className="w-2/5 mx-0 pl-16 box-left">
+                        <div className="w-2/5 mx-0 pl-16 box-left sm:w-full px-6">
                             <div className="text-white">
                                 <p className="druk-bold text-h1 inline">META</p>
                             </div>
-                            <div className="text-white -mt-12">
+                            <div className="text-white -mt-12 text-h2-c">
                                 <p className="ogg-roman text-h2 inline">AVATARS</p>
                             </div>
                             <div className="text-white -mt-1 w-6/12 md:w-10/12 sm:w-full cb-text">
@@ -227,18 +227,18 @@ export default function Home() {
                   }
                   {
                     displayedContentIndex === 1 && 
-                    <div className="container-fluid container-body w-full flex justify-center items-end body-private px-0 mx-0 pr-0 flex-end absolute bottom-36">
-                        <div className="w-2/5 mx-0 pl-16 box-left">
+                    <div className="container-fluid container-body w-full flex  items-end body-private px-0 mx-0 pr-0 flex-end absolute bottom-36">
+                        <div className="w-2/5 mx-0 pl-16 box-left sm:w-full">
                             <div className="text-white">
                                 <p className="druk-bold text-h1">PRIVATE</p>
                             </div>
-                            <div className="text-white -mt-12">
+                            <div className="text-white -mt-12 text-h2-c">
                                 <p className="ogg-roman text-h2">MEMBERS</p>
                             </div>
-                            <div className="text-white -mt-2 w-6/12 md:w-full sm:w-full cb-text">
+                            <div className="text-white -mt-1 w-6/12 md:w-full sm:w-full cb-text pr-6">
                                 <p className="fk-grotesk text-d1">We've partnered with one of the most exclusive restaurants in Miami to offer an after-hours private members only speakeasy experience. This will be the first in a number of ways you can use your Avatar IRL</p>
                             </div>
-                            <div className="text-black">
+                            <div className="text-black mt-4">
                                 <button className="h1-button my-4 fk-grotesk-mono"> 
                                     GET EARLY ACCESS 
                                 </button>
@@ -316,17 +316,17 @@ export default function Home() {
                   
                   { displayedContentIndex === 2 &&
                     <div className="container-fluid container-body w-full flex justify-center items-end body-space px-0 mx-0 pr-0 flex-end absolute bottom-36">
-                      <div className="w-full mx-0 pl-16 box-left">
+                      <div className="w-full mx-0 px-16 box-left">
                           <div className="text-white">
                               <p className="druk-bold text-h1">SPACE</p>
                           </div>
-                          <div className="text-white -mt-12">
+                          <div className="text-white -mt-12 text-h2-c">
                               <p className="ogg-roman text-h2">PODS</p>
                           </div>
-                          <div className="text-white w-2/5 -mt-2 cb-text">
+                          <div className="text-white w-2/5 -mt-1 cb-text cb-space-text">
                               <p className="fk-grotesk text-d1">Futuristic spaces with sprawling views of Miami. Customize and upgrade, to show off your NFT’s and hang out with fellow private members, in space. Powered by OnCyber</p>
                           </div>
-                          <div className="text-black">
+                          <div className="text-black mt-4">
                               <button className="h2-button my-4 fk-grotesk-mono">
                                   COMING SOON
                               </button>
@@ -340,24 +340,24 @@ export default function Home() {
                   
                   {displayedContentIndex === 3 && 
                   <div className="container  container-body w-full  items-end body-physical px-0 mx-0 pr-0 flex-end absolute bottom-36">
-                      <div className="w-5/5 mx-0 pl-16 z-50 box-left float-left">
+                      <div className="w-5/5 mx-0 px-16 z-50 box-left float-left">
                           <div className="text-white">
                               <p className="druk-bold text-h1">PHYSICAL</p>
                           </div>
-                          <div className="text-white -mt-12">
+                          <div className="text-white -mt-12 text-h2-c">
                               <p className="ogg-roman text-h2">COLLECTIBLES</p>
                           </div>
-                          <div className="text-white -mt-2 w-6/12 md:w-10/12 sm:w-10/12">
+                          <div className="text-white -mt-1 w-6/12 md:w-10/12 sm:w-10/12 cb-text">
                               <p className="fk-grotesk text-d1">Forge unique physical collectibles created from your Avatar, get that crazy jacket IRL</p>
                           </div>
-                          <div className="text-black">
+                          <div className="text-black mt-4">
                               <button className="h2-button my-4 fk-grotesk-mono">
                                   COMING SOON
                               </button>
                           </div>
                       </div>
                       
-                          <Image src="/images/physical-jacket.png" className="forging-jacket w-2/5" width={100} height={100}/>
+                          <Image src="/images/physical-jacket.png" className="forging-jacket w-2/5" width={200} height={200}/>
                     
                       
                   </div>
@@ -367,17 +367,17 @@ export default function Home() {
 
                     displayedContentIndex === 4 &&
                     <div className="container-fluid container-body w-full flex justify-center items-end body-luxury px-0 mx-0 pr-0 flex-end absolute bottom-36">
-                      <div className="w-2/5 mx-0 pl-16 box-left">
+                      <div className="w-2/5 mx-0 pl-16 box-left sm:w-full">
                           <div className="text-white">
-                              <p className="druk-bold `text-h1">LUXURY</p>``
+                              <p className="druk-bold text-h1">LUXURY</p>
                           </div>
-                          <div className="text-white -mt-12">
+                          <div className="text-white -mt-12 text-h2-c">
                               <p className="ogg-roman text-h2">RESIDENCES</p>
                           </div>
-                          <div className="text-white -mt-2 w-6/12 md:w-10/12 sm:w-full cb-text">
+                          <div className="text-white -mt-1 w-6/12 md:w-10/12 sm:w-full cb-text">
                               <p className="fk-grotesk text-d1">Forty Four Miami Hotel & Residences will feature 44 fully-furnished luxury residences IRL with studios to two-bedroom floor plans plus penthouses. Private members get early access at pre-build stage</p>
                           </div>
-                          <div className="text-black">
+                          <div className="text-black mt-4">
                               <button className="h1-button my-4 fk-grotesk-mono"> 
                                   GET EARLY ACCESS 
                               </button>
