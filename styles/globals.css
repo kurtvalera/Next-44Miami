@@ -567,7 +567,7 @@ flex-grow: 0;
 
 }
 
-@media only screen and (max-width: 420px)
+@media only screen and (max-width: 425px)
 {
     .text-h1, .text-h2
     {

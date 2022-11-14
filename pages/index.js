@@ -156,7 +156,7 @@ export default function Home() {
                             </div>
                         </div>
                         
-                        <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end">
+                        <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end lg:flex md:hidden sm:hidden sm:w-0">
                             <div className="box-top lg:flex md:hidden sm:hidden">
                                 <div className="flex w-full items-center">
                                         <div className="grow">
@@ -244,7 +244,7 @@ export default function Home() {
                                 </button>
                             </div>
                         </div>
-                        <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end">
+                        <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end lg:flex md:hidden sm:hidden sm:w-0">
                             <div className="box-top lg:flex md:hidden sm:hidden">
                                 <div className="flex w-full items-center">
                                         <div className="grow">
@@ -383,7 +383,7 @@ export default function Home() {
                               </button>
                           </div>
                       </div>
-                      <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end">
+                      <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end lg:flex md:hidden sm:hidden sm:w-0">
                             <div className="box-top lg:flex md:hidden sm:hidden">
                                 <div className="flex w-full items-center">
                                         <div className="grow">
