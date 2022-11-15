@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <div className="bg-black bg-blur">
-      <div className={`overlay-nav bg-black h-full w-full z-0 absolute inset-0 ${mobileNavShown ? 'block' : 'hidden'}`}>
+      <div className={`overlay-nav bg-black w-full z-0 absolute inset-0 ${mobileNavShown ? 'block' : 'hidden'}`}>
         <div className="">
             <div className="flex flex-row justify-between p-6 mt-6">
                 <div className="mobile-logo">

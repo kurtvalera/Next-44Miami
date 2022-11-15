@@ -397,6 +397,7 @@ flex-grow: 0;
 {
     transition: 0.2s ease-in-out;
     animation: fadeIn 0.2s;
+    height: 115% !important;
 }
 
 .ozura-button-nav
