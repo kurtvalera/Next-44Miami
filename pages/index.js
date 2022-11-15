@@ -375,7 +375,7 @@ export default function Home() {
                           <div className="text-white -mt-12 text-h2-c">
                               <p className="ogg-roman text-h2">RESIDENCES</p>
                           </div>
-                          <div className="text-white -mt-1 w-6/12 md:w-10/12 sm:w-full cb-text pc-text">
+                          <div className="text-white -mt-1 w-6/12 cb-text pc-text">
                               <p className="fk-grotesk text-d1">Forty Four Miami Hotel & Residences will feature 44 fully-furnished luxury residences IRL with studios to two-bedroom floor plans plus penthouses. Private members get early access at pre-build stage</p>
                           </div>
                           <div className="text-black mt-4">
