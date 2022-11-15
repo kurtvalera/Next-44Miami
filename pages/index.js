@@ -121,6 +121,7 @@ export default function Home() {
             </div>
         </div>
       </div>
+      
       <div className={`container-fluid w-full container-full h-full m-0 p-0 z-50 absolute inset-0 ${mobileNavShown ? 'hidden' : 'block'}`}>
           <div className="container-bg h-full w-full m-0 p-0">
               <div className={`container-row h-full mx-0 p-0 ${getBackgroundClass()}`}>
@@ -139,7 +140,7 @@ export default function Home() {
                   
                   { displayedContentIndex === 0 &&
                     <div className="container-fluid container-body w-full flex items-end  body-avatar px-0 mx-0 pr-0 flex-end absolute bottom-36">
-                        <div className="w-2/5 mx-0 pl-16 box-left sm:w-full px-6">
+                        <div className="w-2/5 mx-0 pl-16 box-left px-6">
                             <div className="text-white">
                                 <p className="druk-bold text-h1 inline">META</p>
                             </div>
@@ -156,7 +157,7 @@ export default function Home() {
                             </div>
                         </div>
                         
-                        <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end lg:flex md:hidden sm:hidden sm:w-0">
+                        <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end lg:flex md:hidden sm:hidden">
                             <div className="box-top lg:flex md:hidden sm:hidden">
                                 <div className="flex w-full items-center">
                                         <div className="grow">
@@ -228,7 +229,7 @@ export default function Home() {
                   {
                     displayedContentIndex === 1 && 
                     <div className="container-fluid container-body w-full flex  items-end body-private px-0 mx-0 pr-0 flex-end absolute bottom-36">
-                        <div className="w-2/5 mx-0 pl-16 box-left sm:w-full">
+                        <div className="w-2/5 mx-0 pl-16 box-left ">
                             <div className="text-white">
                                 <p className="druk-bold text-h1">PRIVATE</p>
                             </div>
@@ -244,7 +245,7 @@ export default function Home() {
                                 </button>
                             </div>
                         </div>
-                        <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end lg:flex md:hidden sm:hidden sm:w-0">
+                        <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end lg:flex md:hidden sm:hidden ">
                             <div className="box-top lg:flex md:hidden sm:hidden">
                                 <div className="flex w-full items-center">
                                         <div className="grow">
@@ -347,7 +348,7 @@ export default function Home() {
                           <div className="text-white -mt-12 text-h2-c">
                               <p className="ogg-roman text-h2">COLLECTIBLES</p>
                           </div>
-                          <div className="text-white -mt-1 w-6/12 md:w-10/12 sm:w-10/12 cb-text">
+                          <div className="text-white -mt-1 w-6/12 md:w-10/12 sm:w-10/12 cb-text pc-text">
                               <p className="fk-grotesk text-d1">Forge unique physical collectibles created from your Avatar, get that crazy jacket IRL</p>
                           </div>
                           <div className="text-black mt-4">
@@ -374,7 +375,7 @@ export default function Home() {
                           <div className="text-white -mt-12 text-h2-c">
                               <p className="ogg-roman text-h2">RESIDENCES</p>
                           </div>
-                          <div className="text-white -mt-1 w-6/12 md:w-10/12 sm:w-full cb-text">
+                          <div className="text-white -mt-1 w-6/12 md:w-10/12 sm:w-full cb-text pc-text">
                               <p className="fk-grotesk text-d1">Forty Four Miami Hotel & Residences will feature 44 fully-furnished luxury residences IRL with studios to two-bedroom floor plans plus penthouses. Private members get early access at pre-build stage</p>
                           </div>
                           <div className="text-black mt-4">
@@ -383,7 +384,7 @@ export default function Home() {
                               </button>
                           </div>
                       </div>
-                      <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end lg:flex md:hidden sm:hidden sm:w-0">
+                      <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end lg:flex md:hidden sm:hidden sm:w-0 left-sm">
                             <div className="box-top lg:flex md:hidden sm:hidden">
                                 <div className="flex w-full items-center">
                                         <div className="grow">
