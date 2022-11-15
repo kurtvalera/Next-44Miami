@@ -123,8 +123,8 @@ export default function Home() {
       </div>
       
       <div className={`container-fluid w-full container-full h-full m-0 p-0 z-50 absolute inset-0 ${mobileNavShown ? 'hidden' : 'block'}`}>
-          <div className="container-bg h-full w-full m-0 p-0">
-              <div className={`container-row h-full mx-0 p-0 ${getBackgroundClass()}`}>
+          <div className={`container-bg h-full w-full m-0 p-0 ${getBackgroundClass()}`}>
+              <div className={`container-row h-full mx-0 p-0`}>
                   
                   <div className="mx-16 pt-12 upper-nav"> 
                       <div className="float-left logo cursor-pointer">
@@ -140,7 +140,7 @@ export default function Home() {
                   
                   { displayedContentIndex === 0 &&
                     <div className="container-fluid container-body w-full flex items-end  body-avatar px-0 mx-0 pr-0 flex-end absolute bottom-36">
-                        <div className="w-2/5 mx-0 pl-16 box-left px-6">
+                        <div className="w-2/5 mx-0 pl-16 box-left avatar-box">
                             <div className="text-white">
                                 <p className="druk-bold text-h1 inline">META</p>
                             </div>
@@ -163,34 +163,34 @@ export default function Home() {
                                         <div className="grow">
                                             <Image src="/images/ozurapay.png" width={50} height={50} className="mx-0"/>
                                         </div>
-                                        <div className="grow flex justify-center items-center pr-16">
+                                        <div className="grow flex items-center pr-16">
                                             <p className="text-white ozura-text">
                                                 Ozurapay
                                             </p>
                                         </div>
                                         <div className="grow">
-                                            <button className="ozura-button fk-grotesk-mono">
+                                            <button className="ozura-button fk-grotesk-mono ml-3">
                                                 BUY NFT
                                             </button>
                                         </div>
                                 </div>
                                 <div className="flex w-full justify-items-center">
                                         <div className="grow">
-                                            <div className="justify-center text-center text-white">
+                                            <div className="text-left text-white">
                                                 <p className="fk-grotesk ozura-value">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">MKT.CAP</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
-                                            <div className="justify-center text-center text-white">
+                                            <div className="text-center text-white ml-6"> 
                                                 <p className="fk-grotesk ozura-value">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">24H VOLUME</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
-                                            <div className="justify-center text-center text-white">
+                                            <div className="text-right text-white">
                                                 <p className="fk-grotesk  ozura-value">$28.1M</p>  
-                                                <p className="fk-grotesk-mono  ozura-label text-opacity-50">HOLDERS</p>  
+                                                <p className="fk-grotesk-mono  ozura-label text-opacity-50 text-center ml-12">HOLDERS</p>  
                                             </div>
                                         </div>
                                     
@@ -199,24 +199,30 @@ export default function Home() {
                             <div className="box-bot lg:flex md:hidden sm:hidden">
                                 <div className="flex w-full">
                                     <div className="grow">
-                                        <div className="justify-center text-center text-white">
+                                        <div className="justify-center text-left text-white">
                                           
                                             <FontAwesomeIcon icon={faInstagram} className="fa-ozura"/>
                                         </div>
                                     </div>
                                     <div className="grow">
-                                        <div className="justify-center text-center text-white">
+                                        <div className="justify-center text-right text-white">
                                             
                                             <FontAwesomeIcon icon={faLinkedin} className="fa-ozura"/>
                                         </div>
                                     </div>
                                     <div className="grow">
-                                        <div className="justify-center text-center text-white">
+                                        
+                                    </div>
+                                    <div className="grow">
+                                        
+                                    </div>
+                                    <div className="grow">
+                                        <div className="justify-center text-left text-white">
                                           <FontAwesomeIcon icon={faDiscord} className="fa-ozura"/>
                                         </div>
                                     </div>
                                     <div className="grow">
-                                        <div className="justify-center text-center text-white">
+                                        <div className="justify-center text-right text-white">
                                         <FontAwesomeIcon icon={faTwitter} className="fa-ozura"/>
                                         </div>
                                     </div>
@@ -245,40 +251,40 @@ export default function Home() {
                                 </button>
                             </div>
                         </div>
-                        <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end lg:flex md:hidden sm:hidden ">
+                        <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end lg:flex md:hidden sm:hidden">
                             <div className="box-top lg:flex md:hidden sm:hidden">
                                 <div className="flex w-full items-center">
                                         <div className="grow">
-                                            <Image src="/images/ozurapay.png" width={50} height={50}/>
+                                            <Image src="/images/ozurapay.png" width={50} height={50} className="mx-0"/>
                                         </div>
-                                        <div className="grow flex justify-center items-center pr-16">
+                                        <div className="grow flex items-center pr-16">
                                             <p className="text-white ozura-text">
                                                 Ozurapay
                                             </p>
                                         </div>
                                         <div className="grow">
-                                            <button className="ozura-button fk-grotesk-mono">
+                                            <button className="ozura-button fk-grotesk-mono ml-3">
                                                 BUY NFT
                                             </button>
                                         </div>
                                 </div>
                                 <div className="flex w-full justify-items-center">
                                         <div className="grow">
-                                            <div className="justify-center text-center text-white">
+                                            <div className="text-left text-white">
                                                 <p className="fk-grotesk ozura-value">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">MKT.CAP</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
-                                            <div className="justify-center text-center text-white">
+                                            <div className="text-center text-white ml-6"> 
                                                 <p className="fk-grotesk ozura-value">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">24H VOLUME</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
-                                            <div className="justify-center text-center text-white">
+                                            <div className="text-right text-white">
                                                 <p className="fk-grotesk  ozura-value">$28.1M</p>  
-                                                <p className="fk-grotesk-mono  ozura-label text-opacity-50">HOLDERS</p>  
+                                                <p className="fk-grotesk-mono  ozura-label text-opacity-50 text-center ml-12">HOLDERS</p>  
                                             </div>
                                         </div>
                                     
@@ -287,24 +293,30 @@ export default function Home() {
                             <div className="box-bot lg:flex md:hidden sm:hidden">
                                 <div className="flex w-full">
                                     <div className="grow">
-                                        <div className="justify-center text-center text-white">
+                                        <div className="justify-center text-left text-white">
                                           
                                             <FontAwesomeIcon icon={faInstagram} className="fa-ozura"/>
                                         </div>
                                     </div>
                                     <div className="grow">
-                                        <div className="justify-center text-center text-white">
+                                        <div className="justify-center text-right text-white">
                                             
                                             <FontAwesomeIcon icon={faLinkedin} className="fa-ozura"/>
                                         </div>
                                     </div>
                                     <div className="grow">
-                                        <div className="justify-center text-center text-white">
+                                        
+                                    </div>
+                                    <div className="grow">
+                                        
+                                    </div>
+                                    <div className="grow">
+                                        <div className="justify-center text-left text-white">
                                           <FontAwesomeIcon icon={faDiscord} className="fa-ozura"/>
                                         </div>
                                     </div>
                                     <div className="grow">
-                                        <div className="justify-center text-center text-white">
+                                        <div className="justify-center text-right text-white">
                                         <FontAwesomeIcon icon={faTwitter} className="fa-ozura"/>
                                         </div>
                                     </div>
@@ -384,40 +396,40 @@ export default function Home() {
                               </button>
                           </div>
                       </div>
-                      <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end lg:flex md:hidden sm:hidden sm:w-0 left-sm">
+                      <div className="w-3/5 mx-0 box-right pr-16 flex flex-col justify-center items-end lg:flex md:hidden sm:hidden">
                             <div className="box-top lg:flex md:hidden sm:hidden">
                                 <div className="flex w-full items-center">
                                         <div className="grow">
-                                            <Image src="/images/ozurapay.png" width={50} height={50}/>
+                                            <Image src="/images/ozurapay.png" width={50} height={50} className="mx-0"/>
                                         </div>
-                                        <div className="grow flex justify-center items-center pr-16">
+                                        <div className="grow flex items-center pr-16">
                                             <p className="text-white ozura-text">
                                                 Ozurapay
                                             </p>
                                         </div>
                                         <div className="grow">
-                                            <button className="ozura-button fk-grotesk-mono">
+                                            <button className="ozura-button fk-grotesk-mono ml-3">
                                                 BUY NFT
                                             </button>
                                         </div>
                                 </div>
                                 <div className="flex w-full justify-items-center">
                                         <div className="grow">
-                                            <div className="justify-center text-center text-white">
+                                            <div className="text-left text-white">
                                                 <p className="fk-grotesk ozura-value">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">MKT.CAP</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
-                                            <div className="justify-center text-center text-white">
+                                            <div className="text-center text-white ml-6"> 
                                                 <p className="fk-grotesk ozura-value">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">24H VOLUME</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
-                                            <div className="justify-center text-center text-white">
+                                            <div className="text-right text-white">
                                                 <p className="fk-grotesk  ozura-value">$28.1M</p>  
-                                                <p className="fk-grotesk-mono  ozura-label text-opacity-50">HOLDERS</p>  
+                                                <p className="fk-grotesk-mono  ozura-label text-opacity-50 text-center ml-12">HOLDERS</p>  
                                             </div>
                                         </div>
                                     
@@ -426,24 +438,30 @@ export default function Home() {
                             <div className="box-bot lg:flex md:hidden sm:hidden">
                                 <div className="flex w-full">
                                     <div className="grow">
-                                        <div className="justify-center text-center text-white">
+                                        <div className="justify-center text-left text-white">
                                           
                                             <FontAwesomeIcon icon={faInstagram} className="fa-ozura"/>
                                         </div>
                                     </div>
                                     <div className="grow">
-                                        <div className="justify-center text-center text-white">
+                                        <div className="justify-center text-right text-white">
                                             
                                             <FontAwesomeIcon icon={faLinkedin} className="fa-ozura"/>
                                         </div>
                                     </div>
                                     <div className="grow">
-                                        <div className="justify-center text-center text-white">
+                                        
+                                    </div>
+                                    <div className="grow">
+                                        
+                                    </div>
+                                    <div className="grow">
+                                        <div className="justify-center text-left text-white">
                                           <FontAwesomeIcon icon={faDiscord} className="fa-ozura"/>
                                         </div>
                                     </div>
                                     <div className="grow">
-                                        <div className="justify-center text-center text-white">
+                                        <div className="justify-center text-right text-white">
                                         <FontAwesomeIcon icon={faTwitter} className="fa-ozura"/>
                                         </div>
                                     </div>
