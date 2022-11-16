@@ -50,6 +50,17 @@
     src: url(../public/fonts/FKGrotesk/FKGroteskMono-Regular.ttf)
 }
 
+@font-face
+{
+    font-family: 'FK Grotesk Regular';
+    src: url(../public/fonts/FKGrotesk/FKGrotesk-Regular.ttf);
+}
+
+.fk-grotesk-reg
+{
+    font-family: 'FK Grotesk Regular';
+}
+
 img 
 {
     pointer-events:none;
@@ -108,6 +119,41 @@ html
     transition:0.2s ease;
     animation: fadeIn 0.2s;
 }
+
+.gea-label
+{
+    font-size:24px;   
+}
+.gea-input
+{
+    --tw-ring-color:white !important;
+    outline: 1px solid black;
+}
+
+.gea-button
+{
+    border-radius: 100px;
+    padding: 14px 28px 14px 28px;
+    background-color: #52E8FF;
+    outline:1px solid rgba(82, 232, 255, 0.5);
+    outline-offset: 6px;
+    font-weight:600;
+    font-size:12px;
+    transition:0.300s ease-out
+}
+
+.gea-input:focus
+{
+    outline:none !important;
+    
+}
+
+.gea-input:active
+{
+    outline:none !important;
+    
+}
+
 .druk-bold
 {
     font-family: 'Druk LCG Wide'
@@ -162,6 +208,17 @@ html
     font-size:12px;
     transition:0.300s ease-out
 }
+
+.h1-button:active
+{
+    outline:1px solid rgba(82, 232, 255, 0.5) !important;
+}
+
+.h1-button:focus
+{
+    outline:1px solid rgba(82, 232, 255, 0.5) !important;
+}
+
 
 .h1-button:hover
 {
@@ -412,6 +469,7 @@ flex-grow: 0;
     font-size: 12px;
 }
 
+
 .ozura-button:hover
 {
     background: rgba(255, 255, 255, 1);
@@ -544,8 +602,27 @@ flex-grow: 0;
     }
 }
 
+@media only screen and (max-width: 720px)
+{   
+    .text-d1-a
+    {
+        width:80% !important;
+        margin-right:0 !important;
+    }
+
+    .cb-text
+    {
+        width: 80% !important;
+        margin-right:0 !important;
+    }
+}
+
 @media only screen and (max-width: 660px)
 {
+    .box-right
+    {
+        display:none;
+    }
     .text-h1, .text-h2
     {
         font-size: 52px !important;
@@ -571,7 +648,8 @@ flex-grow: 0;
     .cb-text 
     {
         margin-top:8px;
-        width: 120% !important
+        width: 80% !important
+
     }
     .pc-text
     {
@@ -614,7 +692,7 @@ flex-grow: 0;
     .cb-text 
     {
         margin-top:8px;
-        width: 110% !important
+        width: 100% !important
     }
 
     .ozura-button-nav {
@@ -659,7 +737,12 @@ flex-grow: 0;
     .cb-text 
     {
         margin-top:8px;
-        width: 110% !important
+        width: 100% !important
+    }
+
+    .pc-text
+    {
+        width:80% !important;
     }
 
 }

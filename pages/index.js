@@ -1,9 +1,23 @@
-import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import React from "react";
+
+
+//React Bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
+
+// Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faLinkedin, faDiscord, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { useState } from 'react'
+
+
+import ReactDOM from "react-dom";
+import Modal from "react-bootstrap/Modal";
+import Form from 'react-bootstrap/Form'
+import ModalBody from "react-bootstrap/ModalBody";
+import ModalHeader from "react-bootstrap/ModalHeader";
+import ModalFooter from "react-bootstrap/ModalFooter";
+import ModalTitle from "react-bootstrap/ModalTitle";
 
 
 export default function Home() {
@@ -21,6 +35,36 @@ export default function Home() {
   
   
   }
+
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [timer, setTimer] = React.useState(0);
+  const [startTime, setStartTime] = React.useState(0);
+  const [endTime, setEndTime] = React.useState(0);
+
+  const showModal = () => {
+    setIsOpen(true);
+
+  };
+
+  const hideModal = () => {
+    setIsOpen(false);
+  };
+
+  const startTimer = () => {
+    setStartTime(Date.now());
+  };
+
+  const modalLoaded = () => {
+    setEndTime(Date.now());
+  };
+
+  const onExit = () => {
+ 
+  };
+
+  const onExited = () => {
+
+  };
 
   return (
     <div className="bg-black bg-blur">
@@ -81,7 +125,7 @@ export default function Home() {
                         <div className="flex w-full justify-between items-center px-4">
                                 <div className="flex flex-row items-center">
                                     <Image src="/images/ozurapay.png" className="h-12 w-12 nav-ozura-img mr-5" width={100} height={100}/>
-                                    <p className="text-white ozura-text-nav">
+                                    <p className="text-white ozura-text mb-0-nav">
                                         Ozurapay
                                     </p>
                                 </div>
@@ -125,7 +169,51 @@ export default function Home() {
       <div className={`container-fluid w-full container-full h-full m-0 p-0 z-50 absolute inset-0 ${mobileNavShown ? 'hidden' : 'block'}`}>
           <div className={`container-bg h-full w-full m-0 p-0 ${getBackgroundClass()}`}>
               <div className={`container-row h-full mx-0 p-0`}>
-                  
+                    
+                    {/* Modal */}
+                    <>
+                      <div className="justify-center items-center">
+                      <Modal
+                                show={isOpen}
+                                onHide={hideModal}
+                                onEnter={startTimer}
+                                onEntered={modalLoaded}
+                                onExit={onExit}
+                                size="lg"
+                                aria-labelledby="contained-modal-title-vcenter"
+                                centered
+                                onExited={onExited}
+                            >
+                                <Modal.Header>
+                                <Modal.Title>
+                                    <div className="">
+
+                                    </div>
+                                </Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body className="p-4">
+                                    <Form.Group >
+                                        <Form.Label className="fk-grotesk-reg gea-label">Name</Form.Label>
+                                        <Form.Control type="text" placeholder="NAME INPUT" className="h-16 gea-input shadow-none mb-4"/>           
+                                    </Form.Group>
+                                    <Form.Group >
+                                        <Form.Label className="fk-grotesk-reg gea-label">Email Address </Form.Label>
+                                        <Form.Control type="text" placeholder="EMAIL INPUT" className="h-16 gea-input shadow-none mb-4"/>           
+                                    </Form.Group>
+                                    <Form.Group >
+                                        <Form.Label className="fk-grotesk-reg gea-label">Wallet Address </Form.Label>
+                                        <Form.Control type="text" placeholder="Wallet INPUT" className="h-16 gea-input shadow-none mb-4"/>           
+                                    </Form.Group>
+
+                                </Modal.Body>
+                                <Modal.Footer>
+                                    <button className="gea-button fk-grotesk-mono" onClick={hideModal}>Cancel</button>
+                                    <button className="gea-button fk-grotesk-mono">Send</button>
+                                </Modal.Footer>
+                            </Modal>
+                      </div>      
+                           
+                    </>    
                   <div className="mx-16 pt-12 upper-nav"> 
                       <div className="float-left logo cursor-pointer">
                           <Image src="/images/44-logo.svg" className="" width={200} height={200}/>
@@ -142,16 +230,16 @@ export default function Home() {
                     <div className="container-fluid container-body w-full flex items-end  body-avatar px-0 mx-0 pr-0 flex-end absolute bottom-36">
                         <div className="w-2/5 mx-0 pl-16 box-left avatar-box">
                             <div className="text-white">
-                                <p className="druk-bold text-h1 inline">META</p>
+                                <p className="druk-bold text-h1 mb-0 inline">META</p>
                             </div>
                             <div className="text-white -mt-12 text-h2-c">
                                 <p className="ogg-roman text-h2 inline">AVATARS</p>
                             </div>
                             <div className="text-white -mt-1 w-6/12 md:w-10/12 sm:w-full cb-text">
-                                <p className="fk-grotesk text-d1">The beginning of a whole ecosystem for our private members, with quality-focused, high-end avatars, ready for the Metaverse</p>
+                                <p className="fk-grotesk text-d1 mb-0 text-d1-a">The beginning of a whole ecosystem for our private members, with quality-focused, high-end avatars, ready for the Metaverse</p>
                             </div>
                             <div className="text-black mt-4">
-                                <button className="h1-button my-4 fk-grotesk-mono"> 
+                                <button className="h1-button my-4 fk-grotesk-mono" onClick={showModal}> 
                                     GET EARLY ACCESS 
                                 </button>
                             </div>
@@ -164,7 +252,7 @@ export default function Home() {
                                             <Image src="/images/ozurapay.png" width={50} height={50} className="mx-0"/>
                                         </div>
                                         <div className="grow flex items-center pr-16">
-                                            <p className="text-white ozura-text">
+                                            <p className="text-white ozura-text mb-0">
                                                 Ozurapay
                                             </p>
                                         </div>
@@ -177,19 +265,19 @@ export default function Home() {
                                 <div className="flex w-full justify-items-center">
                                         <div className="grow">
                                             <div className="text-left text-white">
-                                                <p className="fk-grotesk ozura-value">$28.1M</p>
+                                                <p className="fk-grotesk ozura-value invisible m-0">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">MKT.CAP</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
                                             <div className="text-center text-white ml-6"> 
-                                                <p className="fk-grotesk ozura-value">$28.1M</p>
+                                                <p className="fk-grotesk ozura-value invisible m-0">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">24H VOLUME</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
                                             <div className="text-right text-white">
-                                                <p className="fk-grotesk  ozura-value">$28.1M</p>  
+                                                <p className="fk-grotesk  ozura-value invisible m-0">$28.1M</p>  
                                                 <p className="fk-grotesk-mono  ozura-label text-opacity-50 text-center ml-12">HOLDERS</p>  
                                             </div>
                                         </div>
@@ -237,16 +325,16 @@ export default function Home() {
                     <div className="container-fluid container-body w-full flex  items-end body-private px-0 mx-0 pr-0 flex-end absolute bottom-36">
                         <div className="w-2/5 mx-0 pl-16 box-left ">
                             <div className="text-white">
-                                <p className="druk-bold text-h1">PRIVATE</p>
+                                <p className="druk-bold text-h1 mb-0">PRIVATE</p>
                             </div>
                             <div className="text-white -mt-12 text-h2-c">
                                 <p className="ogg-roman text-h2">MEMBERS</p>
                             </div>
                             <div className="text-white -mt-1 w-6/12 md:w-full sm:w-full cb-text pr-6">
-                                <p className="fk-grotesk text-d1">We've partnered with one of the most exclusive restaurants in Miami to offer an after-hours private members only speakeasy experience. This will be the first in a number of ways you can use your Avatar IRL</p>
+                                <p className="fk-grotesk text-d1 mb-0">We've partnered with one of the most exclusive restaurants in Miami to offer an after-hours private members only speakeasy experience. This will be the first in a number of ways you can use your Avatar IRL</p>
                             </div>
                             <div className="text-black mt-4">
-                                <button className="h1-button my-4 fk-grotesk-mono"> 
+                                <button className="h1-button my-4 fk-grotesk-mono" onClick={showModal}> 
                                     GET EARLY ACCESS 
                                 </button>
                             </div>
@@ -258,7 +346,7 @@ export default function Home() {
                                             <Image src="/images/ozurapay.png" width={50} height={50} className="mx-0"/>
                                         </div>
                                         <div className="grow flex items-center pr-16">
-                                            <p className="text-white ozura-text">
+                                            <p className="text-white ozura-text mb-0">
                                                 Ozurapay
                                             </p>
                                         </div>
@@ -271,19 +359,19 @@ export default function Home() {
                                 <div className="flex w-full justify-items-center">
                                         <div className="grow">
                                             <div className="text-left text-white">
-                                                <p className="fk-grotesk ozura-value">$28.1M</p>
+                                                <p className="fk-grotesk ozura-value invisible m-0">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">MKT.CAP</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
                                             <div className="text-center text-white ml-6"> 
-                                                <p className="fk-grotesk ozura-value">$28.1M</p>
+                                                <p className="fk-grotesk ozura-value invisible m-0">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">24H VOLUME</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
                                             <div className="text-right text-white">
-                                                <p className="fk-grotesk  ozura-value">$28.1M</p>  
+                                                <p className="fk-grotesk  ozura-value invisible m-0">$28.1M</p>  
                                                 <p className="fk-grotesk-mono  ozura-label text-opacity-50 text-center ml-12">HOLDERS</p>  
                                             </div>
                                         </div>
@@ -331,13 +419,13 @@ export default function Home() {
                     <div className="container-fluid container-body w-full flex justify-center items-end body-space px-0 mx-0 pr-0 flex-end absolute bottom-36">
                       <div className="w-full mx-0 px-16 box-left">
                           <div className="text-white">
-                              <p className="druk-bold text-h1">SPACE</p>
+                              <p className="druk-bold text-h1 mb-0">SPACE</p>
                           </div>
                           <div className="text-white -mt-12 text-h2-c">
                               <p className="ogg-roman text-h2">PODS</p>
                           </div>
                           <div className="text-white w-2/5 -mt-1 cb-text cb-space-text">
-                              <p className="fk-grotesk text-d1">Futuristic spaces with sprawling views of Miami. Customize and upgrade, to show off your NFT’s and hang out with fellow private members, in space. Powered by OnCyber</p>
+                              <p className="fk-grotesk text-d1 mb-0">Futuristic spaces with sprawling views of Miami. Customize and upgrade, to show off your NFT’s and hang out with fellow private members, in space. Powered by OnCyber</p>
                           </div>
                           <div className="text-black mt-4">
                               <button className="h2-button my-4 fk-grotesk-mono">
@@ -355,13 +443,13 @@ export default function Home() {
                   <div className="container  container-body w-full  items-end body-physical px-0 mx-0 pr-0 flex-end absolute bottom-36">
                       <div className="w-5/5 mx-0 px-16 z-50 box-left float-left">
                           <div className="text-white">
-                              <p className="druk-bold text-h1">PHYSICAL</p>
+                              <p className="druk-bold text-h1 mb-0">PHYSICAL</p>
                           </div>
                           <div className="text-white -mt-12 text-h2-c">
                               <p className="ogg-roman text-h2">COLLECTIBLES</p>
                           </div>
                           <div className="text-white -mt-1 w-6/12 md:w-10/12 sm:w-10/12 cb-text pc-text">
-                              <p className="fk-grotesk text-d1">Forge unique physical collectibles created from your Avatar, get that crazy jacket IRL</p>
+                              <p className="fk-grotesk text-d1 mb-0">Forge unique physical collectibles created from your Avatar, get that crazy jacket IRL</p>
                           </div>
                           <div className="text-black mt-4">
                               <button className="h2-button my-4 fk-grotesk-mono">
@@ -382,16 +470,16 @@ export default function Home() {
                     <div className="container-fluid container-body w-full flex justify-center items-end body-luxury px-0 mx-0 pr-0 flex-end absolute bottom-36">
                       <div className="w-2/5 mx-0 pl-16 box-left sm:w-full">
                           <div className="text-white">
-                              <p className="druk-bold text-h1">LUXURY</p>
+                              <p className="druk-bold text-h1 mb-0">LUXURY</p>
                           </div>
                           <div className="text-white -mt-12 text-h2-c">
                               <p className="ogg-roman text-h2">RESIDENCES</p>
                           </div>
                           <div className="text-white -mt-1 w-6/12 cb-text pc-text">
-                              <p className="fk-grotesk text-d1">Forty Four Miami Hotel & Residences will feature 44 fully-furnished luxury residences IRL with studios to two-bedroom floor plans plus penthouses. Private members get early access at pre-build stage</p>
+                              <p className="fk-grotesk text-d1 mb-0">Forty Four Miami Hotel & Residences will feature 44 fully-furnished luxury residences IRL with studios to two-bedroom floor plans plus penthouses. Private members get early access at pre-build stage</p>
                           </div>
                           <div className="text-black mt-4">
-                              <button className="h1-button my-4 fk-grotesk-mono"> 
+                              <button className="h1-button my-4 fk-grotesk-mono" onClick={showModal}> 
                                   GET EARLY ACCESS 
                               </button>
                           </div>
@@ -403,7 +491,7 @@ export default function Home() {
                                             <Image src="/images/ozurapay.png" width={50} height={50} className="mx-0"/>
                                         </div>
                                         <div className="grow flex items-center pr-16">
-                                            <p className="text-white ozura-text">
+                                            <p className="text-white ozura-text mb-0">
                                                 Ozurapay
                                             </p>
                                         </div>
@@ -416,19 +504,19 @@ export default function Home() {
                                 <div className="flex w-full justify-items-center">
                                         <div className="grow">
                                             <div className="text-left text-white">
-                                                <p className="fk-grotesk ozura-value">$28.1M</p>
+                                                <p className="fk-grotesk ozura-value invisible m-0">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">MKT.CAP</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
                                             <div className="text-center text-white ml-6"> 
-                                                <p className="fk-grotesk ozura-value">$28.1M</p>
+                                                <p className="fk-grotesk ozura-value invisible m-0">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">24H VOLUME</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
                                             <div className="text-right text-white">
-                                                <p className="fk-grotesk  ozura-value">$28.1M</p>  
+                                                <p className="fk-grotesk  ozura-value invisible m-0">$28.1M</p>  
                                                 <p className="fk-grotesk-mono  ozura-label text-opacity-50 text-center ml-12">HOLDERS</p>  
                                             </div>
                                         </div>
@@ -478,27 +566,27 @@ export default function Home() {
                   <div className="text-white fixed bottom-0 w-full bot-nav bg-black h-1/12">
                       <div className="flex items-center justify-between h-full">
                           <div className={`h-full items-center w-full justify-center flex group cursor-pointer nav-item nav-avatar text-center ${displayedContentIndex === 0 && 'nav-active'}`} onClick={()=>setDisplayedContentIndex(0)}>
-                              <p className="fk-grotesk-mono nav-a text-xs">
+                              <p className="fk-grotesk-mono nav-a mb-0  text-xs">
                                   AVATARS
                               </p>
                           </div>
                           <div className={`h-full items-center w-full justify-center flex group cursor-pointer nav-item nav-avatar text-center ${displayedContentIndex === 1 && 'nav-active'}`}  onClick={()=>setDisplayedContentIndex(1)}>
-                              <p className=" fk-grotesk-mono nav-a text-xs px-2">
+                              <p className=" fk-grotesk-mono nav-a mb-0  text-xs px-2">
                                   PRIVATE MEMBERS CLUB
                               </p>
                           </div>
                           <div className={`h-full items-center w-full justify-center flex group cursor-pointer nav-item nav-avatar text-center ${displayedContentIndex === 2 && 'nav-active'}`} onClick={()=>setDisplayedContentIndex(2)}>
-                              <p className=" fk-grotesk-mono nav-a text-xs">
+                              <p className=" fk-grotesk-mono nav-a mb-0  text-xs">
                                   SPACE PODS
                               </p>
                           </div>
                           <div className={`h-full items-center w-full justify-center flex group cursor-pointer nav-item nav-avatar text-center ${displayedContentIndex === 3 && 'nav-active'}`} onClick={()=>setDisplayedContentIndex(3)}>
-                              <p className=" fk-grotesk-mono nav-a text-xs">
+                              <p className=" fk-grotesk-mono nav-a mb-0  text-xs">
                                   FORGING
                               </p>
                           </div>
                           <div className={`h-full items-center w-full justify-center flex group cursor-pointer nav-item nav-avatar text-center ${displayedContentIndex === 4 && 'nav-active'}`} onClick={()=>setDisplayedContentIndex(4)}>
-                              <p className=" fk-grotesk-mono nav-a text-xs">
+                              <p className=" fk-grotesk-mono nav-a mb-0  text-xs">
                                   RESIDENCES
                               </p>
                           </div>
