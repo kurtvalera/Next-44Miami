@@ -207,8 +207,8 @@ export default function Home() {
 
                                 </Modal.Body>
                                 <Modal.Footer>
-                                    <button className="gea-button fk-grotesk-mono" onClick={hideModal}>Cancel</button>
-                                    <button className="gea-button fk-grotesk-mono">Send</button>
+                                    <button onClick={hideModal}>Cancel</button>
+                                    <button className="gea-button">Send</button>
                                 </Modal.Footer>
                             </Modal>
                       </div>      
