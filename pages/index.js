@@ -177,19 +177,19 @@ export default function Home() {
                                 <div className="flex w-full justify-items-center">
                                         <div className="grow">
                                             <div className="text-left text-white">
-                                                <p className="fk-grotesk ozura-value"></p>
+                                                <p className="fk-grotesk ozura-value hidden">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">MKT.CAP</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
                                             <div className="text-center text-white ml-6"> 
-                                                <p className="fk-grotesk ozura-value"></p>
+                                                <p className="fk-grotesk ozura-value hidden">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">24H VOLUME</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
                                             <div className="text-right text-white">
-                                                <p className="fk-grotesk  ozura-value"></p>  
+                                                <p className="fk-grotesk  ozura-value hidden">$28.1M</p>  
                                                 <p className="fk-grotesk-mono  ozura-label text-opacity-50 text-center ml-12">HOLDERS</p>  
                                             </div>
                                         </div>
@@ -271,19 +271,19 @@ export default function Home() {
                                 <div className="flex w-full justify-items-center">
                                         <div className="grow">
                                             <div className="text-left text-white">
-                                                <p className="fk-grotesk ozura-value"></p>
+                                                <p className="fk-grotesk ozura-value hidden hidden">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">MKT.CAP</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
                                             <div className="text-center text-white ml-6"> 
-                                                <p className="fk-grotesk ozura-value"></p>
+                                                <p className="fk-grotesk ozura-value hidden">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">24H VOLUME</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
                                             <div className="text-right text-white">
-                                                <p className="fk-grotesk  ozura-value"></p>  
+                                                <p className="fk-grotesk  ozura-value hidden">$28.1M</p>  
                                                 <p className="fk-grotesk-mono  ozura-label text-opacity-50 text-center ml-12">HOLDERS</p>  
                                             </div>
                                         </div>
@@ -416,19 +416,19 @@ export default function Home() {
                                 <div className="flex w-full justify-items-center">
                                         <div className="grow">
                                             <div className="text-left text-white">
-                                                <p className="fk-grotesk ozura-value"></p>
+                                                <p className="fk-grotesk ozura-value hidden">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">MKT.CAP</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
                                             <div className="text-center text-white ml-6"> 
-                                                <p className="fk-grotesk ozura-value"></p>
+                                                <p className="fk-grotesk ozura-value hidden">$28.1M</p>
                                                 <p className="fk-grotesk-mono ozura-label text-opacity-50">24H VOLUME</p> 
                                             </div>
                                         </div>
                                         <div className="grow">
                                             <div className="text-right text-white">
-                                                <p className="fk-grotesk  ozura-value"></p>  
+                                                <p className="fk-grotesk  ozura-value hidden">$28.1M</p>  
                                                 <p className="fk-grotesk-mono  ozura-label text-opacity-50 text-center ml-12">HOLDERS</p>  
                                             </div>
                                         </div>
