@@ -149,7 +149,7 @@ export default function Home() {
                 SPACE PODS
               </span>
             </div>
-            {/* asdasd */}
+            
             <div className="px-6 py-10">
               <span
                 className="text-white druk-bold topnav-item  on-nav-physical"
@@ -245,6 +245,7 @@ export default function Home() {
                   aria-labelledby="contained-modal-title-vcenter"
                   centered
                   onExited={onExited}
+                  contentClassName="modal-gea-success"
                 >
                   <Modal.Body className="p-4 bg-black">
                     <div
@@ -257,8 +258,8 @@ export default function Home() {
                       />
                     </div>
                     <div className="justify-center items-center text-center text-white bg-black border-black mt-8">
-                      <div className="druk-bold text-5xl">EXPERIENCE</div>
-                      <div className="ogg-roman text-5xl">ELEGANCE</div>
+                      <div className="druk-bold text-5xl modal-gea-success-h1">EXPERIENCE</div>
+                      <div className="ogg-roman text-5xl modal-gea-success-h2">ELEGANCE</div>
                     </div>
                     <div className="justify-center items-center text-center mt-6 mb-9">
                       <div className="text-white fk-grotesk">
@@ -315,11 +316,9 @@ export default function Home() {
                         <Form.Control
                           type="text"
                           placeholder="Your full name here..."
-                          className="fk-grotesk h-16 gea-input"
+                          className="fk-grotesk h-16 gea-input mb-8"
                         />
-                        <div className="gea-text-error -mt-4 mb-3 ml-8 invisible">
-                          Something went wrong. Please try again.
-                        </div>
+                      
                       </Form.Group>
                       <Form.Group>
                         <Form.Label className="fk-grotesk-mono gea-label text-white flex ml-5">
