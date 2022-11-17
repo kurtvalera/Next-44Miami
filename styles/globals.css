@@ -88,6 +88,7 @@
 
 .modal-backdrop.show {
     opacity: 0.843 !important;
+    backdrop-filter: blur(8px) !important;
 }
  .gea-label {
      font-style: normal;

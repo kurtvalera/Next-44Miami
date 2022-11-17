@@ -329,7 +329,7 @@ export default function Home() {
                         </Form.Label>
                         <Form.Control
                           type="email"
-                          placeholder="Your full email address here..."
+                          placeholder="Your email address here..."
                           className="fk-grotesk h-16 gea-input shadow-none mb-4"
                         />
                         {/* Hidden error message */}
