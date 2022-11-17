@@ -56,6 +56,9 @@
     src: url(../public/fonts/FKGrotesk/FKGrotesk-Regular.ttf);
 }
 
+
+
+
 .fk-grotesk-reg
 {
     font-family: 'FK Grotesk Regular';
@@ -91,6 +94,7 @@ html
 .container-bg 
 {
     background-image: linear-gradient(rgba(255,0,0,0), rgb(0, 0, 0, 255));
+    transition: 0.2s ease;
 }
 
 @keyframes fadeIn
@@ -122,18 +126,65 @@ html
 
 .gea-label
 {
-    font-size:24px;   
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 120%;
+    /* or 14px */
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.gea-input::placeholder
+{
+    font-size:15px !important;
 }
 .gea-input
 {
-    --tw-ring-color:white !important;
-    outline: 1px solid black;
+    
+    outline: 1px solid transparent;
+    border-radius: 25px !important;
+    height:45px !important;
+    padding-left:22px !important;
+    padding-top:12px !important;
+    padding-bottom:12px !important;
+    font-size:15px !important;
+    justify-content: center;
+    background-clip: unset !important;
+    
 }
+
+.gea-input:active
+{
+    outline: 10px solid rgba(82, 232, 255, 1);
+}
+
+.gea-input-error
+{
+    outline: 1px solid red;
+}
+
+.gea-text-error
+{
+    font-family: 'FK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    /* identical to box height, or 17px */
+
+
+    /* Red */
+
+    color: #FF4242;
+}
+
 
 .gea-button
 {
     border-radius: 100px;
-    padding: 14px 28px 14px 28px;
+    padding: 20px 40px 20px 40px;
     background-color: #52E8FF;
     outline:1px solid rgba(82, 232, 255, 0.5);
     outline-offset: 6px;

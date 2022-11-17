@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faLinkedin, faDiscord, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 
 
@@ -37,27 +38,49 @@ export default function Home() {
   }
 
   const [isOpen, setIsOpen] = React.useState(false);
-  const [timer, setTimer] = React.useState(0);
-  const [startTime, setStartTime] = React.useState(0);
-  const [endTime, setEndTime] = React.useState(0);
+  const [isSuccessOpen, setSuccessOpen] = React.useState(false);
+
+  const isEmail = (email) =>
+  /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
+  const [emailValues, setEmailValue] = useState({ email: "" });
+  const [emailError, setEmailError] = useState({});
+  
+  // For ONSUBMIT
+  const validateAndSubmitForm = (e) => {
+    e.preventDefault();
+    const emailError = {};
+    if (!isEmail(emailValues.email)) {
+        emailError.email = "Wrong email";
+    }
+    setEmailError(emailError);
+    if (!Object.keys(emailError).length) {
+      alert(JSON.stringify(emailValues, null, 2));
+    }
+  };
+  // For ONCHANGE
+  const setEmail = (e) => {
+    setEmailValue((values) => ({ ...values, email: e.target.value }));
+  };
+
 
   const showModal = () => {
     setIsOpen(true);
-
   };
+
+  const showSuccessModal = () => {
+    setSuccessOpen(true);
+    setIsOpen(false);
+  }
+
+  const hideSuccessModal = () => {
+    setSuccessOpen(false);
+  }
 
   const hideModal = () => {
     setIsOpen(false);
   };
 
-  const startTimer = () => {
-    setStartTime(Date.now());
-  };
-
-  const modalLoaded = () => {
-    setEndTime(Date.now());
-  };
-
+ 
   const onExit = () => {
  
   };
@@ -169,47 +192,130 @@ export default function Home() {
       <div className={`container-fluid w-full container-full h-full m-0 p-0 z-50 absolute inset-0 ${mobileNavShown ? 'hidden' : 'block'}`}>
           <div className={`container-bg h-full w-full m-0 p-0 ${getBackgroundClass()}`}>
               <div className={`container-row h-full mx-0 p-0`}>
-                    
-                    {/* Modal */}
+
+                    {/* Modal Success*/}
                     <>
-                      <div className="justify-center items-center">
+                      <div className="justify-center items-center border-black" >
                       <Modal
-                                show={isOpen}
-                                onHide={hideModal}
-                                onEnter={startTimer}
-                                onEntered={modalLoaded}
+                                show={isSuccessOpen}
+                                onHide={hideSuccessModal}
                                 onExit={onExit}
                                 size="lg"
                                 aria-labelledby="contained-modal-title-vcenter"
                                 centered
                                 onExited={onExited}
+                                
                             >
-                                <Modal.Header>
-                                <Modal.Title>
-                                    <div className="">
-
+                                
+                                
+                                <Modal.Body className="p-4 bg-black">
+                                    <div className="text-white float-right text-xl" onClick={hideSuccessModal}>
+                                        <FontAwesomeIcon icon={faXmark} className="cursor-pointer"/>
                                     </div>
-                                </Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body className="p-4">
-                                    <Form.Group >
-                                        <Form.Label className="fk-grotesk-reg gea-label">Name</Form.Label>
-                                        <Form.Control type="text" placeholder="NAME INPUT" className="h-16 gea-input shadow-none mb-4"/>           
-                                    </Form.Group>
-                                    <Form.Group >
-                                        <Form.Label className="fk-grotesk-reg gea-label">Email Address </Form.Label>
-                                        <Form.Control type="text" placeholder="EMAIL INPUT" className="h-16 gea-input shadow-none mb-4"/>           
-                                    </Form.Group>
-                                    <Form.Group >
-                                        <Form.Label className="fk-grotesk-reg gea-label">Wallet Address </Form.Label>
-                                        <Form.Control type="text" placeholder="Wallet INPUT" className="h-16 gea-input shadow-none mb-4"/>           
-                                    </Form.Group>
+                                    <div className="justify-center items-center text-center text-white bg-black border-black mt-8">
+                                        <div className="druk-bold text-5xl">
+                                            EXPERIENCE
+                                        </div>
+                                        <div className="ogg-roman text-5xl">
+                                            ELEGANCE
+                                        </div>
+                                    </div>
+                                    <div className="justify-center items-center text-center mt-6 mb-9">
+                                        <div className="text-white fk-grotesk">
+                                            You are now part the chosen few.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row justify-center items-center px-12">
+                                        <button className="gea-button fk-grotesk-mono mb-4" onClick={hideSuccessModal}> 
+                                            BACK TO HOME 
+                                        </button>
+                                    </div>
+                                        
 
                                 </Modal.Body>
-                                <Modal.Footer>
-                                    <button onClick={hideModal}>Cancel</button>
-                                    <button className="gea-button">Send</button>
-                                </Modal.Footer>
+                                
+                            </Modal>
+                      </div>      
+                           
+                    </>   
+                    
+                    {/* Modal GEA*/}
+                    <>
+                      <div className="justify-center items-center border-black" >
+                      <Modal
+                                show={isOpen}
+                                onHide={hideModal}
+                                onExit={onExit}
+                                size="lg"
+                                aria-labelledby="contained-modal-title-vcenter"
+                                centered
+                                onExited={onExited}
+                                
+                            >
+                                
+                                
+                                <Modal.Body className="p-4 bg-black">
+                                    <div className="text-white float-right text-xl" onClick={hideModal}>
+                                        <FontAwesomeIcon icon={faXmark} className="cursor-pointer"/>
+                                    </div>
+                                    <div className="justify-center items-center text-center text-white bg-black border-black mt-8">
+                                        <div className="druk-bold text-5xl">
+                                            BE PART
+                                        </div>
+                                        <div className="ogg-roman text-5xl">
+                                            OF THE CLUB
+                                        </div>
+                                    </div>
+                                    <div className="mt-10 px-12">
+                                        <Form.Group className="mb-6">
+                                            <Form.Label className="fk-grotesk-mono gea-label text-white flex ml-5">
+                                                <div className="text-red-600 text-xs font-bold mr-1">
+                                                    *
+                                                </div>
+                                                FULL NAME
+                                            </Form.Label>
+                                            <Form.Control type="text" placeholder="Your full name here..." className="fk-grotesk h-16 gea-input"/>     
+                                            <div className="gea-text-error -mt-4 mb-3 ml-8 invisible">
+                                                Something went wrong. Please try again.    
+                                            </div>         
+                                        </Form.Group>
+                                        <Form.Group >
+                                            <Form.Label className="fk-grotesk-mono gea-label text-white flex ml-5">
+                                                <div className="text-red-600 text-xs font-bold mr-1">
+                                                    *
+                                                </div>
+                                                EMAIL ADDRESS
+                                            </Form.Label>
+                                            <Form.Control type="email" placeholder="Your full email address here..." className="fk-grotesk h-16 gea-input shadow-none mb-4"/>
+                                            {/* Hidden error message */}
+                                            <div className="gea-text-error -mt-4 mb-3 ml-8 invisible">
+                                                Something went wrong. Please try again.    
+                                            </div>               
+                                        </Form.Group>
+                                        <Form.Group >
+                                            <Form.Label className="fk-grotesk-mono gea-label text-white flex ml-5">
+                                                <div className="text-red-600 text-xs font-bold mr-1">
+                                                    *
+                                                </div>
+                                                WALLET ADDRESS
+                                            </Form.Label>
+                                            <Form.Control type="text" placeholder="e.g. 0xde3dbb...6045c71a" className="fk-grotesk h-16 gea-input shadow-none mb-4"/> 
+                                            {/* Hidden error message */}
+                                            <div className="gea-text-error -mt-4 mb-4 ml-8 invisible">
+                                                Something went wrong. Please try again.    
+                                            </div>          
+                                        </Form.Group>
+
+                                    </div>
+                                    <div className="flex flex-row justify-center items-center mt-12 px-12">
+                                        <button className="gea-button fk-grotesk-mono mb-4" onClick={showSuccessModal}> 
+                                            GET EARLY ACCESS 
+                                        </button>
+                                    </div>
+                                        
+
+                                </Modal.Body>
+                                
                             </Modal>
                       </div>      
                            
