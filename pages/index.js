@@ -85,9 +85,7 @@ export default function Home() {
     setIsOpen(false);
   };
 
-  const onExit = () => {};
-
-  const onExited = () => {};
+    
 
   return (
     <div className="bg-black bg-blur">
@@ -240,12 +238,10 @@ export default function Home() {
                 <Modal
                   show={isSuccessOpen}
                   onHide={hideSuccessModal}
-                  onExit={onExit}
                   size="lg"
                   aria-labelledby="contained-modal-title-vcenter"
                   centered
-                  onExited={onExited}
-                  contentClassName="modal-gea-success"
+                  contentClassName="modal-gea-success" kurt
                 >
                   <Modal.Body className="p-4 bg-black">
                     <div
@@ -285,11 +281,11 @@ export default function Home() {
                 <Modal
                   show={isOpen}
                   onHide={hideModal}
-                  onExit={onExit}
+                
                   size="lg"
                   aria-labelledby="contained-modal-title-vcenter"
                   centered
-                  onExited={onExited}
+                
                 >
                   <Modal.Body className="p-4 bg-black">
                     <div
@@ -329,7 +325,7 @@ export default function Home() {
                         </Form.Label>
                         <Form.Control
                           type="email"
-                          placeholder="Your email address here..."
+                          placeholder="Your full email address here..."
                           className="fk-grotesk h-16 gea-input shadow-none mb-4"
                         />
                         {/* Hidden error message */}
@@ -697,7 +693,7 @@ export default function Home() {
                   <div className="text-white -mt-12 text-h2-c">
                     <p className="ogg-roman text-h2">RESIDENCES</p>
                   </div>
-                  <div className="text-white -mt-1 w-6/12 cb-text pc-text">
+                  <div className="text-white -mt-1 w-6/12 cb-text luxury-text">
                     <p className="fk-grotesk text-d1 mb-0">
                       Forty Four Miami Hotel & Residences will feature 44
                       fully-furnished luxury residences IRL with studios to
