@@ -357,7 +357,7 @@
      margin-bottom: 30px;
 }
  .ozura-button {
-     border-radius: 100px;
+     border-radius: 6.25rem;
      padding: 10px 28px 10px 28px;
      background: rgba(255, 255, 255, 0.2);
      outline:1px solid rgba(255, 255, 255, 0.3);
