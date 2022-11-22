@@ -207,7 +207,7 @@
 }
 .h1-button:focus::before 
 {
-    outline:1px solid rgba(82, 232, 255, 0.5);
+    border-radius: 100px 100px;
 }
  .h1-button:active {
      outline:1px solid rgba(82, 232, 255, 0.5) !important;
