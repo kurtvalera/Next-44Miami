@@ -139,7 +139,7 @@
      color: #FF4242;
 }
  .gea-button {
-     border-radius: 100px;
+     border-radius: 6.25rem;
      padding: 20px 40px 20px 40px;
      background-color: #52E8FF;
      outline:1px solid rgba(82, 232, 255, 0.5);
