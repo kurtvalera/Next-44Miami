@@ -195,7 +195,7 @@
      -khtml-border-radius: 6.25rem !important;
        -moz-border-radius: 6.25rem !important;
    
-     border-radius: 100px 100px;
+     border-radius: 625% !important;
      padding: 14px 28px 14px 28px;
      background-color: #52E8FF;
      outline:1px solid rgba(82, 232, 255, 0.5);
