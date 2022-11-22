@@ -274,7 +274,10 @@
      padding: 24px;
      gap: 24px;
      width: 400px;
-     height: 160px;
+     height: 100px;
+     /* height: 160px; 
+        Note: Uncomment this if Ozurapay stats have value
+     */
      float:right;
      background: rgba(0, 0, 0, 0.6);
      border: 1px solid rgba(255, 255, 255, 0.2);
@@ -399,10 +402,15 @@
      letter-spacing: 0.03em;
      color: rgba(255, 255, 255, 0.5);
 }
- .forging-jacket {
-     position:absolute;
-     bottom: 100px;
-     left: 900px;
+.forging-jacket {
+    position:fixed;
+    bottom: 200px;
+    left:900px;
+    padding-right:20px;
+    height: 750px !important;
+    width: auto;
+    transition:0.01 ease-in
+    
 }
  .fa-ozura-nav {
      font-size:32px;
@@ -455,10 +463,36 @@
          width: 100% !important 
     }
 }
+@media only screen and (max-width:1840px) {
+    .forging-jacket {
+        left:800px;
+   }
+}
+@media only screen and (max-width:1740px) {
+    .forging-jacket {
+        left:700px;
+   }
+}
+@media only screen and (max-width:1640px) {
+    .forging-jacket {
+        left:600px;
+   }
+}
+
+@media only screen and (max-width:1540px) {
+    .forging-jacket {
+        left:500px;
+   }
+}
  @media only screen and (max-width:1500px) {
      .forging-jacket {
-         left:700px;
+         left:450px;
     }
+}
+@media only screen and (max-width:1300px) {
+    .forging-jacket {
+        left:350px;
+   }
 }
  @media only screen and (max-width:1200px) {
      .forging-jacket {
@@ -472,6 +506,10 @@
    }
    .luxury-text {
     width:60% !important;
+   }
+
+   .pc-text {
+    width:80% !important;
    }
 }
  @media only screen and (max-width: 720px) {

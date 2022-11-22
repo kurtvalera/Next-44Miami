@@ -15,13 +15,9 @@ import {
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-import ReactDOM from "react-dom";
-import Modal from "react-bootstrap/Modal";
-import Form from "react-bootstrap/Form";
 
-// Images
-import ozurapay from '../public/images/ozurapay.svg';
-import forgingJacket from '../public/images/forging-jacket.svg';
+import Modal from "react-bootstrap/Modal";
+
 
 export default function Home() {
   const [displayedContentIndex, setDisplayedContentIndex] = useState(0);
@@ -46,7 +42,28 @@ export default function Home() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isSuccessOpen, setSuccessOpen] = React.useState(false);
 
-  
+  const isEmail = (email) =>
+    /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
+  const [emailValues, setEmailValue] = useState({ email: "" });
+  const [emailError, setEmailError] = useState({});
+
+  // For ONSUBMIT
+  const validateAndSubmitForm = (e) => {
+    e.preventDefault();
+    const emailError = {};
+    if (!isEmail(emailValues.email)) {
+      emailError.email = "Wrong email";
+    }
+    setEmailError(emailError);
+    if (!Object.keys(emailError).length) {
+      alert(JSON.stringify(emailValues, null, 2));
+    }
+  };
+  // For ONCHANGE
+  const setEmail = (e) => {
+    setEmailValue((values) => ({ ...values, email: e.target.value }));
+  };
+
   const showModal = () => {
     setIsOpen(true);
   };
@@ -89,7 +106,7 @@ export default function Home() {
                 setMobileNavShown(!mobileNavShown);
               }}
             >
-              <Image src="/images/nav-button-gray.svg" width={50} height={50} />
+              <Image src="/images/nav-button-gray.png" width={50} height={50} />
             </div>
           </div>
           <div className="flex flex-col justify-center align-center w-full">
@@ -156,7 +173,7 @@ export default function Home() {
                 <div className="flex w-full justify-between items-center px-4">
                   <div className="flex flex-row items-center">
                     <Image
-                      src={ozurapay}
+                      src="/images/ozurapay.png"
                       className="h-12 w-12 nav-ozura-img mr-5"
                       width={100}
                       height={100}
@@ -203,12 +220,12 @@ export default function Home() {
       </div>
 
       <div
-        className={`container-fluid w-full container-full h-full m-0 p-0 absolute inset-0 ${
+        className={`container-fluid w-full container-full h-full m-0 p-0 z-50 absolute inset-0 ${
           mobileNavShown ? "hidden" : "block"
         }`}
       >
         <div
-          className={`container-bg h-full bg-black w-full m-0 p-0 ${getBackgroundClass()}`}
+          className={`container-bg h-full w-full m-0 p-0 ${getBackgroundClass()}`}
         >
           <div className={`container-row h-full mx-0 p-0`}>
             {/* Modal Success*/}
@@ -358,7 +375,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src="/images/nav-button-black.svg"
+                  src="/images/nav-button-black.png"
                   className="topnav-button h-12 w-12 nav-ozura-img-d"
                   width={100}
                   height={100}
@@ -397,13 +414,11 @@ export default function Home() {
                     <div className="flex w-full items-center">
                       <div className="grow">
                         <Image
-                          src={ozurapay}
+                          src="/images/ozurapay.png"
                           width={50}
                           height={50}
                           className="mx-0"
-                          
                         />
-                        
                       </div>
                       <div className="grow flex items-center pr-16">
                         <p className="text-white ozura-text mb-0">Ozurapay</p>
@@ -526,7 +541,7 @@ export default function Home() {
                     <div className="flex w-full items-center">
                       <div className="grow">
                         <Image
-                          src={ozurapay}
+                          src="/images/ozurapay.png"
                           width={50}
                           height={50}
                           className="mx-0"
@@ -642,13 +657,13 @@ export default function Home() {
             )}
 
             {displayedContentIndex === 3 && (
-              <div className="container container-body w-full items-end body-physical px-0 mx-0 pr-0 flex-end absolute bottom-36">
-                <div className="w-5/5 mx-0 px-16 z-50 box-left float-left absolute bottom-0">
-                  <div className="text-white z-50">
-                    <p className="druk-bold text-h1 mb-0 z-50 ">PHYSICAL</p>
+              <div className="container  container-body w-full  items-end body-physical px-0 mx-0 pr-0 flex-end absolute bottom-36">
+                <div className="w-5/5 mx-0 px-16 z-50 box-left float-left">
+                  <div className="text-white">
+                    <p className="druk-bold text-h1 mb-0">PHYSICAL</p>
                   </div>
-                  <div className="text-white -mt-12 text-h2-c z-50 " >
-                    <p className="ogg-roman text-h2 z-50">COLLECTIBLES</p>
+                  <div className="text-white -mt-12 text-h2-c">
+                    <p className="ogg-roman text-h2">COLLECTIBLES</p>
                   </div>
                   <div className="text-white -mt-1 w-6/12 md:w-10/12 sm:w-10/12 cb-text pc-text">
                     <p className="fk-grotesk text-d1 mb-0">
@@ -662,16 +677,14 @@ export default function Home() {
                     </button>
                   </div>
                 </div>
-                <div className="z-0">
-                  <Image
-                    src={forgingJacket}
-                    className="forging-jacket z-0"
-                    width={100}
-                    height={100}
-                  />
-                </div>
+
+                <Image
+                  src="/images/physical-jacket.png"
+                  className="forging-jacket w-2/5"
+                  width={200}
+                  height={200}
+                />
               </div>
-              
             )}
 
             {displayedContentIndex === 4 && (
@@ -705,7 +718,7 @@ export default function Home() {
                     <div className="flex w-full items-center">
                       <div className="grow">
                         <Image
-                          src={ozurapay}
+                          src="/images/ozurapay.png"
                           width={50}
                           height={50}
                           className="mx-0"
