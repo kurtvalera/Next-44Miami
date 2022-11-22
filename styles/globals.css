@@ -432,6 +432,35 @@
  .topnav-button {
      display:none !important;
 }
+
+@media only screen and (max-height: 950px)
+{
+    .forging-jacket {
+        height: 650px !important;
+    }   
+}
+@media only screen and (max-height: 850px)
+{
+    .forging-jacket {
+        height: 550px !important;
+    }   
+}
+@media only screen and (max-height: 750px)
+{
+    .forging-jacket {
+        bottom:150px;
+        left:700px !important;
+        height: 500px !important;
+    }   
+}
+@media only screen and (max-height: 650px)
+{
+    .forging-jacket {
+        bottom:100px;
+        left:650px !important;
+        height: 450px !important;
+    }   
+}
  @media only screen and (min-width: 320px) and (max-width: 1024px){
      .box-top {
          display:none !important;
@@ -481,7 +510,7 @@
 
 @media only screen and (max-width:1540px) {
     .forging-jacket {
-        left:500px;
+        left:600px;
    }
 }
  @media only screen and (max-width:1500px) {
