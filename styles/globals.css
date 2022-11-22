@@ -189,10 +189,11 @@
     display:inline-block;
     -webkit-appearance: none;
     transform: translateZ(0);
+    
     -webkit-transform: translate3d(0, 0, 0);
-    -webkit-border-radius: 6.25rem;
-     -khtml-border-radius: 6.25rem;
-       -moz-border-radius: 6.25rem;
+    -webkit-border-radius: 6.25rem !important;
+     -khtml-border-radius: 6.25rem !important;
+       -moz-border-radius: 6.25rem !important;
    
      border-radius: 100px 100px;
      padding: 14px 28px 14px 28px;
@@ -203,6 +204,10 @@
      font-size:12px;
      transition:0.300s ease-out;
      overflow: hidden;
+}
+.h1-button:focus::before 
+{
+    outline:1px solid rgba(82, 232, 255, 0.5);
 }
  .h1-button:active {
      outline:1px solid rgba(82, 232, 255, 0.5) !important;
