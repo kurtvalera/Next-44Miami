@@ -190,6 +190,10 @@
     
     transform: translateZ(0);
     -webkit-transform: translate3d(0, 0, 0);
+    -webkit-border-radius: 6.25rem;
+     -khtml-border-radius: 6.25rem;
+       -moz-border-radius: 6.25rem;
+   
      border-radius: 6.25rem;
      padding: 14px 28px 14px 28px;
      background-color: #52E8FF;
