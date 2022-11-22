@@ -186,11 +186,8 @@
 }
  .h1-button {
     transform: translateZ(0);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    -khtml-border-radius: 50%;
-     /* border-radius: 6.25rem; */
+    -webkit-transform: translate3d(0, 0, 0);
+     border-radius: 6.25rem;
      padding: 14px 28px 14px 28px;
      background-color: #52E8FF;
      outline:1px solid rgba(82, 232, 255, 0.5);
