@@ -645,4 +645,8 @@
      .pc-text {
          width:80% !important;
     }
+    .ozura-text-nav
+    {
+        font-size:14px !important
+    }
 }

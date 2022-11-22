@@ -93,7 +93,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col justify-center align-center w-full">
-            <div className="px-6 py-10">
+            <div className="px-6 py-4">
               <span
                 className="text-white druk-bold topnav-item  on-nav-avatar"
                 onClick={() => {
@@ -104,7 +104,7 @@ export default function Home() {
                 AVATARS
               </span>
             </div>
-            <div className="px-6 py-10">
+            <div className="px-6 py-4">
               <span
                 className="text-white druk-bold topnav-item on-nav-private leading-6"
                 onClick={() => {
@@ -115,7 +115,7 @@ export default function Home() {
                 PRIVATE MEMBERS CLUB
               </span>
             </div>
-            <div className="px-6 py-10">
+            <div className="px-6 py-4">
               <span
                 className="text-white druk-bold topnav-item  on-nav-space"
                 onClick={() => {
@@ -127,7 +127,7 @@ export default function Home() {
               </span>
             </div>
             
-            <div className="px-6 py-10">
+            <div className="px-6 py-4">
               <span
                 className="text-white druk-bold topnav-item  on-nav-physical"
                 onClick={() => {
@@ -138,7 +138,7 @@ export default function Home() {
                 FORGING
               </span>
             </div>
-            <div className="px-6 py-10">
+            <div className="px-6 py-4">
               <span
                 className="text-white druk-bold topnav-item   on-nav-luxury"
                 onClick={() => {
@@ -161,7 +161,7 @@ export default function Home() {
                       width={100}
                       height={100}
                     />
-                    <p className="text-white ozura-text mb-0-nav">Ozurapay</p>
+                    <p className="text-white ozura-text mb-0 ozura-text-nav">Ozurapay</p>
                   </div>
                   <div className="">
                     <button className="ozura-button-nav fk-grotesk-mono">
