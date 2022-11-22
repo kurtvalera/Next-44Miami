@@ -456,7 +456,7 @@
 @media only screen and (max-height: 650px)
 {
     .forging-jacket {
-        bottom:100px;
+        bottom:120px;
         left:650px !important;
         height: 450px !important;
     }   
