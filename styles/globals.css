@@ -139,6 +139,7 @@
      color: #FF4242;
 }
  .gea-button {
+    transform: translateZ(0);
      border-radius: 6.25rem;
      padding: 20px 40px 20px 40px;
      background-color: #52E8FF;
@@ -184,6 +185,7 @@
      border-radius: 100px;
 }
  .h1-button {
+    transform: translateZ(0);
      border-radius: 6.25rem;
      padding: 14px 28px 14px 28px;
      background-color: #52E8FF;
@@ -204,6 +206,7 @@
      filter: drop-shadow(0px 0px 15px rgba(82, 232, 255, 0.5));
 }
  .h2-button {
+    transform: translateZ(0);
      border-radius: 6.25rem;
      padding: 14px 28px 14px 28px;
      background-color: rgba(16, 46, 51, 1);
@@ -357,6 +360,7 @@
      margin-bottom: 30px;
 }
  .ozura-button {
+    transform: translateZ(0);
      border-radius: 6.25rem;
      padding: 10px 28px 10px 28px;
      background: rgba(255, 255, 255, 0.2);
@@ -372,6 +376,7 @@
      height: 115% !important;
 }
  .ozura-button-nav {
+    transform: translateZ(0);
      border-radius: 6.25rem;
      padding: 10px 28px 10px 28px;
      background: rgba(255, 255, 255, 0.2);
